@@ -1,0 +1,35 @@
+.container {
+  padding: 20px;
+  max-width: 60%;
+  margin: auto;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 80%;
+    transition: 0.3s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 98%;
+  }
+}
+
+.custom-field {
+  margin: 20px 0 !important;
+}
+
+.loader {
+  animation: rotate 2s infinite linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

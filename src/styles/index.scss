@@ -1,0 +1,30 @@
+@import "./variables";
+@import "./mixins";
+
+@import "./general";
+@import "./buttons";
+@import "./layouts";
+@import "./components";
+@import "./not-found";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: 0.3s;
+
+  &:hover {
+    color: rgba($text-color-1, 0.5);
+  }
+}
+
+.page-heading {
+  font-size: 2.2rem;
+  padding-bottom: 10px;
+}
