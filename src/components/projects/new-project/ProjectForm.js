@@ -1,8 +1,8 @@
 import { Field, Form, Formik } from "formik";
 import React from "react";
 import { Plus, X } from "react-feather";
-import { SubmitButton } from "../../../buttons/SubmitButton";
-import CustomField from "../../../form/CustomField";
+import { SubmitButton } from "../../buttons/SubmitButton";
+import CustomField from "../../form/CustomField";
 
 const ProjectForm = ({
   show,

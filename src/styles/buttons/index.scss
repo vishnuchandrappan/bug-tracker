@@ -12,11 +12,19 @@
   svg {
     stroke: $text-color-1;
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }
 
 .close-btn {
   svg {
     cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 }

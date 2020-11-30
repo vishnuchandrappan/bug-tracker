@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { NewProject } from "./NewProject";
+import { NewItem } from "./NewItem";
 
-export const NewProjectContainer = () => {
+export const NewItemContainer = ({ title, Component, ...rest }) => {
   const [show, setShow] = useState(false);
 
   const showForm = () => {
@@ -12,11 +12,11 @@ export const NewProjectContainer = () => {
     setShow(false);
   };
 
-  const props = {
+  const data = {
     show,
     showForm,
     hideForm,
   };
 
-  return <NewProject {...props} />;
+  return <NewItem title={title} Component={Component} {...rest} {...data} />;
 };

@@ -1,13 +1,20 @@
-.primary-card {
+.sprints {
   &-content {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px;
   }
+
+  &-heading {
+    font-size: 1.4rem !important;
+    margin-top: 20px;
+    color: rgba($color-1,0.5);
+    border-bottom: solid 2px $color-2;
+  }
 }
 
 @media screen and (max-width: 1024px) {
-  .primary-card {
+  .sprints {
     &-content {
       grid-template-columns: 1fr 1fr;
       grid-gap: 20px;
@@ -16,7 +23,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .primary-card {
+  .sprints {
     &-content {
       grid-template-columns: 1fr;
       grid-gap: 0px;
@@ -24,7 +31,7 @@
   }
 }
 
-.primary-card {
+.sprint-card {
   margin: 20px 0;
   border-radius: 10px;
   min-height: 180px;
@@ -61,7 +68,7 @@
   }
 }
 
-.project-form {
+.sprint-form {
   @include full-page;
   @include cc-1;
   padding-top: 100px;
@@ -96,7 +103,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .project-form {
+  .sprint-form {
     .page-heading {
       padding: 5px 30px 0 30px;
     }

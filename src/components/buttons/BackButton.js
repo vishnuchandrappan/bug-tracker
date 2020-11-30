@@ -1,11 +1,15 @@
 import { ArrowLeft } from "react-feather";
 import { useHistory } from "react-router-dom";
 
-export const BackButton = ({ target }) => {
+export const BackButton = ({ target = null }) => {
   const history = useHistory();
 
   const handleClick = () => {
-    history.push(target);
+    if (target) {
+      history.push(target);
+    } else {
+      history.goBack();
+    }
   };
 
   return (
