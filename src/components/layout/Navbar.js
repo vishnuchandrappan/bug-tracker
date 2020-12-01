@@ -4,7 +4,7 @@ export default function Navbar() {
   return (
     <nav>
       <div className="nav-logo">
-        <Link to="/">LogiBT</Link>
+        <Link to="/">BTracker</Link>
       </div>
     </nav>
   );

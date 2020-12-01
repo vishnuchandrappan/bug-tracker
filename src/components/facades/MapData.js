@@ -1,4 +1,11 @@
+import { useContext } from "react";
+import { ProjectContext } from "../project-view/ProjectViewContainer";
+
 export const MapData = ({ title = null, data, Component, ...rest }) => {
+  const { id } = useContext(ProjectContext);
+
+  const base = title === "Sprints" ? `/projects/${id}` : "";
+
   return (
     <>
       {data.map((item) => (
@@ -6,7 +13,9 @@ export const MapData = ({ title = null, data, Component, ...rest }) => {
           {...item}
           {...rest}
           key={item.id}
-          target={title !== null ? `/${title.toLowerCase()}/${item.id}` : ""}
+          target={
+            title !== null ? `${base}/${title.toLowerCase()}/${item.id}` : ""
+          }
         />
       ))}
     </>
