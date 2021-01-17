@@ -54,8 +54,7 @@ mv src/utils/firebase.example.js src/utils/firebase.js
 
 <br>
 
-## 📌 Firebase setup
-### thats it !
+## 📌 Thats it !
 ```bash
 yarn start
 ```

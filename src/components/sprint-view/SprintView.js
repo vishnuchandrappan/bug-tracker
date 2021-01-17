@@ -1,5 +1,5 @@
+import BugsContainer from "../bugs/BugsContainer";
 import { BackButton } from "../buttons/BackButton";
-import SprintsContainer from "../sprints/SprintsContainer";
 
 export const SprintView = ({ name, description, type }) => {
   return (
@@ -10,7 +10,7 @@ export const SprintView = ({ name, description, type }) => {
         <span className="page-details">{description}</span>
       </div>
       <div className="project-contents">
-        {type === "sprint" ? <SprintsContainer /> : ""}
+        <BugsContainer />
       </div>
     </>
   );

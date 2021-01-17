@@ -12,11 +12,17 @@ export const BugsContainer = () => {
   /** Fetching Projects data from firebase */
   const bugsRef = useFirestore()
     .collection("bugs")
-    .where("buggable_type", "==", type)
-    .where("buggable_id", "==", key);
+    .where("association_type", "==", type)
+    .where("association_id", "==", key);
   const bugs = useFirestoreCollectionData(bugsRef);
 
-  return <Bugs data={bugs} />;
+  const modificationsRef = useFirestore()
+    .collection("modifications")
+    .where("association_type", "==", type)
+    .where("association_id", "==", key);
+  const modifications = useFirestoreCollectionData(modificationsRef);
+
+  return <Bugs bugs={bugs} modifications={modifications} />;
 };
 
 export default BugsContainer;

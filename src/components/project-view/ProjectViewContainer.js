@@ -19,6 +19,7 @@ const ProjectViewContainer = () => {
   const project = useFirestoreCollectionData(projectRef);
 
   projectData["id"] = projectId;
+  projectData["data"] = project;
 
   return project.length > 0 ? (
     <ProjectContext.Provider value={projectData}>

@@ -16,8 +16,9 @@ export const SprintViewContainer = () => {
     .where("id", "==", sprintId);
   const sprint = useFirestoreCollectionData(sprintRef);
 
-  sprintData["id"] = sprintId;
+  sprintData["sprintId"] = sprintId;
   sprintData["content"] = sprint;
+
 
   return sprint.length > 0 ? (
     <SprintContext.Provider value={sprintData}>

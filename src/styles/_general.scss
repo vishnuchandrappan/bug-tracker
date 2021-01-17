@@ -33,3 +33,16 @@
     transform: rotate(360deg);
   }
 }
+
+.align-center {
+  margin: 1rem 0;
+  display: block;
+  text-align: center;
+  color: rgba($color-1, 0.5);
+}
+
+.page-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

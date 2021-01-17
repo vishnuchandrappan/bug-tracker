@@ -8,6 +8,9 @@ export const MapData = ({ title = null, data, Component, ...rest }) => {
 
   return (
     <>
+      {data.length === 0 && (
+        <span className="align-center">No data found !</span>
+      )}
       {data.map((item) => (
         <Component
           {...item}
